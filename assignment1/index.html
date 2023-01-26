@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Сервис комментариев</title>
+</head>
+
+<body class="wrapper">
+    <h1 class="heading">Сервис комментариев со спам фильтром</h1>
+    <div class="main">
+        <section class="comment-form form">
+            <h3 class="form__heading">Оставьте ваш комментарий</h3>
+            <fieldset class="agreement">
+                <div class="agreement__question question">
+                    <legend class="question__label">Показывать ваше имя?</legend>
+                </div>
+                <div class="agreement__answer">
+                    <input class="answer--1" type="radio" id="yes" name="answer" value="yes" />
+                    <label class="answer-label--1" for="yes">Да</label>
+                </div>
+                <div class="agreement__answer">
+                    <input class="answer--2" type="radio" id="no" name="answer" value="no" />
+                    <label class="answer-label--2" for="no">Нет</label>
+                </div>
+            </fieldset>
+            <div class="form__body">
+                <div class="username">
+                    <label class="username__label" for="usernameInput">Введите ваше ФИО:</label>
+                    <input class="username__input" type="text" id="usernameInput" name="name">
+                </div>
+                <div class="userpic">
+                    <label class="userpic__label" for="userpicInput">Введите ссылку вашего аватара:</label>
+                    <input class="userpic__input" type="url" id="userpicInput">
+                </div>
+                <div class="text">
+                    <label class="text__label" for="textInput">Оставьте комментарий</label>
+                    <textarea class="text__input" name="text" id="textInput" maxlength="800"></textarea>
+                </div>
+                <div class="comment-button">
+                    <button onclick='publishComment()' class="button">Отправить</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="chat">
+            <h3 class="chat__heading">Чат</h3>
+            <div class="chat-block">
+            </div>
+        </section>
+
+    </div>
+
+    <script src="./assets/index.js"></script>
+</body>
+
+</html>
