@@ -7,15 +7,15 @@ const answerYes=document.querySelector('.answer--1');
 const chatBlock=document.querySelector('.chat-block');
 
 const createComment = () => {
-    let chatComment=document.createElement('div');
+    const chatComment=document.createElement('div');
     chatComment.className='chat__comment';
     chatBlock.append(chatComment);
 
-    let commentImage=document.createElement('div');
+    const commentImage=document.createElement('div');
     commentImage.className='comment__image';
     chatComment.prepend(commentImage);
 
-    let avatar=document.createElement('img');
+    const avatar=document.createElement('img');
     avatar.className='avatar';
     commentImage.prepend(avatar);
     const pictureSource=pictureInput.value;
@@ -27,7 +27,7 @@ const createComment = () => {
                 avatar.src=pictureSource;
         }
 
-    let username=document.createElement('div');
+    const username=document.createElement('div');
     username.className='comment__username';
     chatComment.prepend(username);
     if (answerYes.checked===true) {
